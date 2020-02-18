@@ -6,7 +6,7 @@
 #include <SFML/Graphics.hpp>
 
 #include <string>
-using namespace std;
+using std::string;
 
 #include "Bitmap.h"
 #include "All2D_WinInterface.h"
@@ -30,7 +30,6 @@ public:
 
     All2DWin();
 private:
-	bool bDebugWinLook;
 	int MessageLoop();
 	void InitWindow();
 	void ChangeCoopLevel();
@@ -39,7 +38,6 @@ private:
 	int WindowX;
 	int WindowY;
 	int DisplayDepht;
-	bool bFullScreen;
 	bool bSmooth;
 	bool bReady;
 	bool bActive;

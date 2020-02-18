@@ -9,7 +9,8 @@
 #include "AnimFrame.h"
 #include "../../UTILS/POINT.H"	// Hinzugefügt von der Klassenansicht
 // For Standard TemplateLibrary Support...
-using namespace std;
+using std::string;
+using std::vector;
 
 #define	ANIM_FORW				0x0001	//Forwaerts
 #define	ANIM_BACK				0x0002	//rueckwaerts
@@ -67,13 +68,13 @@ private:
 
 	bool frameBased;			// Wenn true, dann wird jedes Frame gespielt(langsamer auf langsamen Rechner), wenn false, wird nach Zeit gespielt..
 	int startTime;				// Start der Animation
-	int animDuration;			// Dauer der Animation in ms
+	unsigned int animDuration;			// Dauer der Animation in ms
 	unsigned int actualIndex;			// Zeigt den aktiven Index aus vecIndexes an..
 	int requestedPlayMode;
 	int actualPlayMode;			// Here is either Forward or Backward and Loop, Flip or Once
 	int speed;
-	int numOfRepeats;				// hier werden die anzahl der Wiederholungen gespeichert, so dass  man beim TimebaseAnimation sehen kann, ob eine Phase zuende ist..
-	int	iEnd;			// This value îs the  endpoint of the indexList, which will be played..and shows when it should be repeated
+	unsigned int numOfRepeats;				// hier werden die anzahl der Wiederholungen gespeichert, so dass  man beim TimebaseAnimation sehen kann, ob eine Phase zuende ist..
+	unsigned int	iEnd;			// This value îs the  endpoint of the indexList, which will be played..and shows when it should be repeated
 protected:
 	void generateIndexList();
 //	BTree* Root;

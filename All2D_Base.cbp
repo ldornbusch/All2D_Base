@@ -15,7 +15,7 @@
 					<Add option="-march=core2" />
 					<Add option="-g" />
 					<Add option="-DSFML_STATIC" />
-					<Add directory="../SFML-2.2/include" />
+					<Add directory="../SFML/include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -37,28 +37,28 @@
 			<Add option="-std=c++14" />
 			<Add option="-DSFML_STATIC" />
 			<Add directory="inc" />
-			<Add directory="../SFML-2.4.1/include" />
-			<Add directory="../_ownlibs/header" />
+			<Add directory="../SFML/include" />
+			<Add directory="../_dependencies/include" />
 		</Compiler>
 		<Linker>
 			<Add option="-static-libgcc -static-libstdc++" />
-			<Add library="../SFML-2.4.1/lib/libsfml-network-s.a" />
-			<Add library="../SFML-2.4.1/lib/libsfml-graphics-s.a" />
-			<Add library="../SFML-2.4.1/lib/libsfml-audio-s.a" />
-			<Add library="../SFML-2.4.1/lib/libsfml-window-s.a" />
-			<Add library="../SFML-2.4.1/lib/libsfml-system-s.a" />
-			<Add library="../SFML-2.4.1/lib/libfreetype.a" />
-			<Add library="../SFML-2.4.1/lib/libopenal32.a" />
-			<Add library="../SFML-2.4.1/lib/libjpeg.a" />
-			<Add library="D:/programs/mingw64/x86_64-w64-mingw32/lib/libopengl32.a" />
-			<Add library="D:/programs/mingw64/x86_64-w64-mingw32/lib/libwinmm.a" />
-			<Add library="../_ownlibs/libs/libzlib.a" />
-			<Add library="../SFML-2.4.1/lib/libFLAC.a" />
-			<Add library="../SFML-2.4.1/lib/libvorbisenc.a" />
-			<Add library="../SFML-2.4.1/lib/libvorbisfile.a" />
-			<Add library="../SFML-2.4.1/lib/libvorbis.a" />
-			<Add library="../SFML-2.4.1/lib/libogg.a" />
-			<Add directory="../SFML-2.4.1/lib" />
+			<Add library="libsfml-network-s.a" />
+			<Add library="libsfml-graphics-s.a" />
+			<Add library="libsfml-audio-s.a" />
+			<Add library="libsfml-window-s.a" />
+			<Add library="libsfml-system-s.a" />
+			<Add library="libfreetype.a" />
+			<Add library="libopenal32.a" />
+			<Add library="libjpeg.a" />
+			<Add library="libopengl32.a" />
+			<Add library="libwinmm.a" />
+			<Add library="libFLAC.a" />
+			<Add library="libvorbisenc.a" />
+			<Add library="libvorbisfile.a" />
+			<Add library="libvorbis.a" />
+			<Add library="libogg.a" />
+			<Add directory="../SFML/build/lib" />
+			<Add directory="../_dependencies/lib" />
 		</Linker>
 		<Unit filename="src/All2DEngine/All2D/All2D_Base/Image.cpp" />
 		<Unit filename="src/All2DEngine/All2D/All2D_Base/Image.h" />

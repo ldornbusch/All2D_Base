@@ -2,23 +2,23 @@
 www.sourceforge.net/projects/tinyxml
 Original code (2.0 and earlier )copyright (c) 2000-2002 Lee Thomason (www.grinninglizard.com)
 
-This software is provided 'as-is', without any express or implied
-warranty. In no event will the authors be held liable for any
+This software is provided 'as-is', without any express or implied 
+warranty. In no event will the authors be held liable for any 
 damages arising from the use of this software.
 
-Permission is granted to anyone to use this software for any
-purpose, including commercial applications, and to alter it and
+Permission is granted to anyone to use this software for any 
+purpose, including commercial applications, and to alter it and 
 redistribute it freely, subject to the following restrictions:
 
-1. The origin of this software must not be misrepresented; you must
+1. The origin of this software must not be misrepresented; you must 
 not claim that you wrote the original software. If you use this
 software in a product, an acknowledgment in the product documentation
 would be appreciated but is not required.
 
-2. Altered source versions must be plainly marked as such, and
+2. Altered source versions must be plainly marked as such, and 
 must not be misrepresented as being the original software.
 
-3. This notice may not be removed or altered from any source
+3. This notice may not be removed or altered from any source 
 distribution.
 */
 
@@ -29,8 +29,8 @@ distribution.
 
 // Note tha "PutString" hardcodes the same list. This
 // is less flexible than it appears. Changing the entries
-// or order will break putstring.
-TiXmlBase::Entity TiXmlBase::entity[ NUM_ENTITY ] =
+// or order will break putstring.	
+TiXmlBase::Entity TiXmlBase::entity[ NUM_ENTITY ] = 
 {
 	{ "&amp;",  5, '&' },
 	{ "&lt;",   4, '<' },
@@ -95,11 +95,11 @@ const char* TiXmlBase::ReadName( const char* p, TIXML_STRING * name )
 	// After that, they can be letters, underscores, numbers,
 	// hyphens, or colons. (Colons are valid ony for namespaces,
 	// but tinyxml can't tell namespaces from names.)
-	if (    p && *p
+	if (    p && *p 
 		 && ( isalpha( (unsigned char) *p ) || *p == '_' ) )
 	{
 		while(		p && *p
-				&&	(		isalnum( (unsigned char ) *p )
+				&&	(		isalnum( (unsigned char ) *p ) 
 						 || *p == '_'
 						 || *p == '-'
 						 || *p == ':' ) )
@@ -119,12 +119,12 @@ const char* TiXmlBase::GetEntity( const char* p, char* value )
 	int i;
 
 	// Ignore the &#x entities.
-	if (    strncmp( "&#x", p, 3 ) == 0
-	     && *(p+3)
+	if (    strncmp( "&#x", p, 3 ) == 0 
+	     && *(p+3) 
 		 && *(p+4) )
 	{
 		*value = 0;
-
+		
 		if ( isalpha( *(p+3) ) ) *value += ( tolower( *(p+3) ) - 'a' + 10 ) * 16;
 		else				     *value += ( *(p+3) - '0' ) * 16;
 
@@ -196,10 +196,10 @@ bool TiXmlBase::StringEqual( const char* p,
 	return false;
 }
 
-const char* TiXmlBase::ReadText(	const char* p,
-									TIXML_STRING * text,
-									bool trimWhiteSpace,
-									const char* endTag,
+const char* TiXmlBase::ReadText(	const char* p, 
+									TIXML_STRING * text, 
+									bool trimWhiteSpace, 
+									const char* endTag, 
 									bool caseInsensitive )
 {
     *text = "";
@@ -264,7 +264,7 @@ void TiXmlDocument::StreamIn( TIXML_ISTREAM * in, TIXML_STRING * tag )
 	// This "pre-streaming" will never read the closing ">" so the
 	// sub-tag can orient itself.
 
-	if ( !StreamTo( in, '<', tag ) )
+	if ( !StreamTo( in, '<', tag ) ) 
 	{
 		SetError( TIXML_ERROR_PARSING_EMPTY );
 		return;
@@ -281,7 +281,7 @@ void TiXmlDocument::StreamIn( TIXML_ISTREAM * in, TIXML_STRING * tag )
 
 		if ( in->good() )
 		{
-			// We now have something we presume to be a node of
+			// We now have something we presume to be a node of 
 			// some sort. Identify it, and call the node to
 			// continue streaming.
 			TiXmlNode* node = Identify( tag->c_str() + tagIndex );
@@ -373,7 +373,7 @@ TiXmlNode* TiXmlNode::Identify( const char* p )
 		return 0;
 	}
 
-	// What is this thing?
+	// What is this thing? 
 	// - Elements start with a letter or underscore, but xml is reserved.
 	// - Comments: <!--
 	// - Decleration: <?xml
@@ -437,7 +437,7 @@ void TiXmlElement::StreamIn (TIXML_ISTREAM * in, TIXML_STRING * tag)
 	{
 		int c = in->get();
 		(*tag) += (char) c ;
-
+		
 		if ( c == '>' )
 			break;
 	}
@@ -447,7 +447,7 @@ void TiXmlElement::StreamIn (TIXML_ISTREAM * in, TIXML_STRING * tag)
 	// Okay...if we are a "/>" tag, then we're done. We've read a complete tag.
 	// If not, identify and stream.
 
-	if (    tag->at( tag->length() - 1 ) == '>'
+	if (    tag->at( tag->length() - 1 ) == '>' 
 		 && tag->at( tag->length() - 2 ) == '/' )
 	{
 		// All good!
@@ -490,7 +490,7 @@ void TiXmlElement::StreamIn (TIXML_ISTREAM * in, TIXML_STRING * tag)
 					return;
 
 				int c = in->peek();
-
+				
 				if ( c == '>' )
 					break;
 
@@ -574,7 +574,7 @@ const char* TiXmlElement::Parse( const char* p )
 			// Empty tag.
 			if ( *p  != '>' )
 			{
-				if ( document ) document->SetError( TIXML_ERROR_PARSING_EMPTY );
+				if ( document ) document->SetError( TIXML_ERROR_PARSING_EMPTY );		
 				return 0;
 			}
 			return (p+1);
@@ -645,8 +645,8 @@ const char* TiXmlElement::ReadValue( const char* p )
 				LinkEndChild( textNode );
 			else
 				delete textNode;
-		}
-		else
+		} 
+		else 
 		{
 			// We hit a '<'
 			// Have we hit a new element or an end tag?
@@ -661,7 +661,7 @@ const char* TiXmlElement::ReadValue( const char* p )
 				{
 					p = node->Parse( p );
 					LinkEndChild( node );
-				}
+				}				
 				else
 				{
 					return 0;
@@ -674,7 +674,7 @@ const char* TiXmlElement::ReadValue( const char* p )
 	if ( !p )
 	{
 		if ( document ) document->SetError( TIXML_ERROR_READING_ELEMENT_VALUE );
-	}
+	}	
 	return p;
 }
 
@@ -684,13 +684,13 @@ void TiXmlUnknown::StreamIn( TIXML_ISTREAM * in, TIXML_STRING * tag )
 {
 	while ( in->good() )
 	{
-		int c = in->get();
+		int c = in->get();	
 		(*tag) += c;
 
 		if ( c == '>' )
 		{
 			// All is well.
-			return;
+			return;		
 		}
 	}
 }
@@ -729,15 +729,15 @@ void TiXmlComment::StreamIn( TIXML_ISTREAM * in, TIXML_STRING * tag )
 {
 	while ( in->good() )
 	{
-		int c = in->get();
+		int c = in->get();	
 		(*tag) += c;
 
-		if ( c == '>'
+		if ( c == '>' 
 			 && tag->at( tag->length() - 2 ) == '-'
 			 && tag->at( tag->length() - 3 ) == '-' )
 		{
 			// All is well.
-			return;
+			return;		
 		}
 	}
 }
@@ -790,7 +790,7 @@ const char* TiXmlAttribute::Parse( const char* p )
 		if ( document ) document->SetError( TIXML_ERROR_READING_ATTRIBUTES );
 		return 0;
 	}
-
+	
 	const char* end;
 
 	if ( *p == '\'' )
@@ -827,7 +827,7 @@ void TiXmlText::StreamIn( TIXML_ISTREAM * in, TIXML_STRING * tag )
 {
 	while ( in->good() )
 	{
-		int c = in->peek();
+		int c = in->peek();	
 		if ( c == '<' )
 			return;
 
@@ -902,21 +902,21 @@ const char* TiXmlDeclaration::Parse( const char* p )
 		{
 //			p += 7;
 			TiXmlAttribute attrib;
-			p = attrib.Parse( p );
+			p = attrib.Parse( p );		
 			version = attrib.Value();
 		}
 		else if ( StringEqual( p, "encoding", true ) )
 		{
 //			p += 8;
 			TiXmlAttribute attrib;
-			p = attrib.Parse( p );
+			p = attrib.Parse( p );		
 			encoding = attrib.Value();
 		}
 		else if ( StringEqual( p, "standalone", true ) )
 		{
 //			p += 10;
 			TiXmlAttribute attrib;
-			p = attrib.Parse( p );
+			p = attrib.Parse( p );		
 			standalone = attrib.Value();
 		}
 		else

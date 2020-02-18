@@ -20,16 +20,9 @@ void All2D_Controller::init()
 bool All2D_Controller::masterPaint(Image& backBuffer)
 {
     bool retVal=false;
-    if (All2D_System::doubleBuffering && All2D_System::fullScreen){
-        retVal=paint(imgFrameBuffer);
-        All2D_System::spriteManager.paint(imgFrameBuffer);
-        All2D_System::spriteManager.clear();
-        imgFrameBuffer.show(backBuffer,0,0,IMAGE_BLTMODE_FAST);
-    }else{
-        retVal=paint(backBuffer);
-        All2D_System::spriteManager.paint(backBuffer);
-        All2D_System::spriteManager.clear();
-    }
+    retVal=paint(backBuffer);
+    All2D_System::spriteManager.paint(backBuffer);
+    All2D_System::spriteManager.clear();
     return retVal;
 }
 

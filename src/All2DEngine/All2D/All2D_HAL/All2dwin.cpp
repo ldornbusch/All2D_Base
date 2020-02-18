@@ -12,8 +12,6 @@ All2DWin::All2DWin()//, bool Fullscr ,int winWidth, int winHeight)
 {
 	WindowX = All2D_System::fixedX;		// Window is WindowX px wide
 	WindowY = All2D_System::fixedY;		// Window is WindowY px large
-	bFullScreen=All2D_System::fullScreen;
-	bDebugWinLook = !bFullScreen; // we will have a frame and such things...
 	strTitle=All2D_System::WinTitle;
 	DisplayDepht = WINPLANES;	// We want to have WINPLANES Bits per Pixel
 	bReady=false;
@@ -37,7 +35,7 @@ int All2DWin::startApp(All2D_Controller& dE)
 
 void All2DWin::setFullscreen(bool blnFlag)
 {
-	if (bFullScreen!=blnFlag) {
+	if (All2D_System::fullScreen!=blnFlag) {
 		ChangeCoopLevel();
 	}
 }
@@ -55,14 +53,14 @@ void All2DWin::All2D_Exit()
 // private Method to initialize the Window...
 void All2DWin::InitWindow()
 {
-    sfml_window.create(sf::VideoMode(WindowX,WindowY),strTitle,bFullScreen?sf::Style::Fullscreen : sf::Style::Default);
+    sfml_window.create(sf::VideoMode(WindowX,WindowY),strTitle,All2D_System::fullScreen?sf::Style::Fullscreen : sf::Style::Default);
     sfml_window.setFramerateLimit(60);
 }
 
 // This Method changes between Fullscreen and windowed mode..
 void All2DWin::ChangeCoopLevel()
 {
-    bFullScreen=!bFullScreen;
+    All2D_System::fullScreen=!All2D_System::fullScreen;
     sfml_window.close();
     InitWindow();
 }

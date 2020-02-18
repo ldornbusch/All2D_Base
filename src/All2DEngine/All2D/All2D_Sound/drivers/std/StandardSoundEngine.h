@@ -6,16 +6,16 @@
 #include "..\..\SoundEngine.h"
 #include <Vector>
 
-using namespace std;
+using std::vector;
 
 class StandardSoundEngine : public SoundEngine
 {
 public:
   StandardSoundEngine();
   virtual ~StandardSoundEngine();
-	void setDataSource(char* szPath);
-	Sample* loadSample(char* filename);
-	Music* loadMusic(char* filename);
+	void setDataSource(const char* szPath);
+	Sample* loadSample(const char* filename);
+	Music* loadMusic(const char* filename);
 	void playSample(unsigned int id);
 	void playMusic(unsigned int id);
 	int loadedSamples();
