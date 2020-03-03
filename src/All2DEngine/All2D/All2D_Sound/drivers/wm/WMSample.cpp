@@ -13,7 +13,7 @@
 WMSample::WMSample()
 {
   iID         = -1;
-  szFilename  = NULL;
+  szFilename  = 0;
 	fVolume			= 1.0f;
 	fPan				= 0.0f;
 }

@@ -40,7 +40,6 @@
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-march=i586" />
 					<Add option="-fomit-frame-pointer" />
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O3" />
@@ -57,7 +56,6 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-march=i586" />
 					<Add option="-fomit-frame-pointer" />
 					<Add option="-O3" />
 				</Compiler>
@@ -182,12 +180,12 @@
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
-		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2dwin.cpp">
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2Dwin.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
-		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2dwin.h">
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2Dwin.h">
 			<Option target="Debug" />
 			<Option target="Release" />
 			<Option target="Library" />
@@ -272,21 +270,6 @@
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
-		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/JPEGFILE.CPP">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Library" />
-		</Unit>
-		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/JPEGFILE.H">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Library" />
-		</Unit>
-		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/JPEGLIB.H">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Library" />
-		</Unit>
 		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jconfig.h">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -298,6 +281,21 @@
 			<Option target="Library" />
 		</Unit>
 		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jmorecfg.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpegfile.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpegfile.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpeglib.h">
 			<Option target="Debug" />
 			<Option target="Release" />
 			<Option target="Library" />
@@ -789,12 +787,12 @@
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
-		<Unit filename="src/All2DEngine/Utils/POINT.CPP">
+		<Unit filename="src/All2DEngine/Utils/Point.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
-		<Unit filename="src/All2DEngine/Utils/POINT.H">
+		<Unit filename="src/All2DEngine/Utils/Point.h">
 			<Option target="Debug" />
 			<Option target="Release" />
 			<Option target="Library" />

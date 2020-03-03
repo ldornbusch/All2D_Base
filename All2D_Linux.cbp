@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="All2D_Linux" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Example" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Debug" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="../SFML/include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/example" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Release" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Weffc++" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="bin/Release/All2D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-Weffc++" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Example">
+				<Option output="bin/Release/All2D_Example" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-march=i586" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-m64" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="inc" />
+			<Add directory="../SFML/include" />
+			<Add directory="../_dependencies/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-m64" />
+			<Add option="-static-libgcc -static-libstdc++ -DSFML_STATIC" />
+            <Add option="" />
+            <Add library="libsfml-network-s.a" />
+            <Add library="libsfml-graphics-s.a" />
+            <Add library="libsfml-audio-s.a" />
+            <Add library="libsfml-window-s.a" />
+            <Add library="libsfml-system-s.a" />
+            <Add library="libfreetype.a" />
+            <Add library="libopenal.a" />
+            <Add library="libFLAC.a" />
+            <Add library="libvorbisenc.a" />
+            <Add library="libvorbisfile.a" />
+            <Add library="libvorbis.a" />
+            <Add library="libogg.a" />
+            <Add library="libjpeg.a" />
+            <Add library="libOpenGL.a" />
+            <Add library="pthread" />
+            <Add library="libdl" />
+            <Add library="X11" />
+            <Add library="GLEW" />
+            <Add library="X11-xcb" />
+            <Add library="udev" />
+            <Add library="xcb" />
+            <Add library="xcb-randr" />
+            <Add library="xcb-icccm" />
+            <Add library="xcb-image" />
+            <Add library="libXrandr" />
+            <Add directory="../_dependencies/lib" />
+            <Add directory="../SFML/build/lib" />
+
+		</Linker>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/Image.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/Image.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/ImageText.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/ImageText.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/ScrollMap.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/ScrollMap.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/xContainer.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/xContainer.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/xElement.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Base/xElement.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Controller.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Controller.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Events/Event.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Events/Event.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Events/MessageManager.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Events/MessageManager.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2D_WinInterface.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2Dwin.cpp" />
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/All2Dwin.h" />
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/Bitmap.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/Bitmap.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/GLWindow.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/Myhermes.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/PicLoader.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/PicLoader.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/drawableElement.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/drawableElement.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Blit.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Clear.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Config.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Conv.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Format.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Pal.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/H_Types.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/hermes/Hermes.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jconfig.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jinclude.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jmorecfg.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpegfile.cpp" />
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpegfile.h" />
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/jpeg/jpeglib.h" />
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/png/png.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/png/pngconf.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/png/pnglibconf.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/png/zconf.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_HAL/png/zlib.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/Music.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/Sample.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/Sound.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/SoundEngine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/SoundFactory.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/SoundFactory.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullMusic.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullMusic.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullSample.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullSample.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullSoundEngine.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/null/NullSoundEngine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSample.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSample.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSoundEngine.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSoundEngine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/std/StandardSample.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/std/StandardSoundEngine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/wm/WMSample.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/wm/WMSoundEngine.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/wm/WaveMix.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/utils/wav/WAVE.H">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/Anim.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/Anim.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/AnimFrame.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/AnimFrame.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/AnimManager.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/AnimManager.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/SpriteEntry.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/SpriteEntry.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/SpriteManager.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/SpriteManager.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UIElement.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UIElement.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UIMovableSprite.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UIMovableSprite.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UISprite.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sprites/UISprite.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_System.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_System.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/AppGameController.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/AppGameController.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/includes/WINDOW.H">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/includes/blitmodes.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/includes/gameMessages.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/includes/resource.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/All2DApp.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/CURSOR1.CUR">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/Columns.ico">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/DIRECTX.ICO">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/ICON1.ICO">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D/resources/resource.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/All2D_main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/MouseMover.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/MouseMover.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIButton.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIButton.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UICheckBox.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UICheckBox.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIDragableSprite.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIDragableSprite.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIHoverButton.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIHoverButton.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIKeyRecorder.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIKeyRecorder.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UILayouter.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UILayouter.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIRadioButton.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIRadioButton.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIScrollArea.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIScrollArea.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIScrollBar.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UIScrollBar.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UITextField.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/UITextField.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/XMLDialogSystem.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/XMLDialogSystem.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Gui/hasValue.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/CDebug.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Debug.exe">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Grid.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Grid.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/GridAlign.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/GridAlign.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Line.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Line.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/NativeTest.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Point.cpp" />
+		<Unit filename="src/All2DEngine/Utils/Point.h" />
+		<Unit filename="src/All2DEngine/Utils/Rect.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Rect.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Vector.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/Vector.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinystr.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinystr.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinyxml.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinyxml.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinyxmlerror.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xml/tinyxmlparser.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/_$hex$t_copyxzip.bat">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/build_definition.js">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/encode.vbs">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/header.xhd">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/xZip.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/xZip.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/All2DEngine/Utils/xzip/xzip.js">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+		</Unit>
+		<Unit filename="src/GFX_Base/GFX_BaseController.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Example" />
+		</Unit>
+		<Unit filename="src/GFX_Base/GFX_BaseController.hpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Example" />
+		</Unit>
+		<Unit filename="src/main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Example" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
