@@ -4,6 +4,7 @@
 
 #include "SFMLSoundEngine.h"
 #include "SFMLSample.h"
+#include "SFMLMusic.h"
 #include "../null/NullMusic.h"
 #include "../null/NullSample.h"
 #include "../../../All2D_System.h"
@@ -31,7 +32,14 @@ Sample* SFMLSoundEngine::loadSample(const char* filename)
 
 Music* SFMLSoundEngine::loadMusic(const char* filename)
 {
-	return new NullMusic();
+	SFMLMusic* retVal = new SFMLMusic();
+	if (retVal->load(tracks.size(),filename)==0){
+        tracks.insert(tracks.end(), retVal);
+	}else{
+        delete retVal;
+        retVal = 0;
+	}
+	return retVal;
 }
 
 void SFMLSoundEngine::playSample(unsigned int id)
@@ -43,6 +51,12 @@ void SFMLSoundEngine::playSample(unsigned int id)
 void SFMLSoundEngine::playMusic(unsigned int id)
 {
 	if (!bInitialized) return;
+	if (id<tracks.size()){
+        for(size_t i = 0; i<tracks.size(); ++i){
+            tracks[i]->stop();
+        }
+        tracks[id]->play();
+	}
 }
 
 int SFMLSoundEngine::loadedSamples()

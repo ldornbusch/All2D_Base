@@ -12,18 +12,6 @@ public:
 	virtual ~Sample(){};
 
   /**
-   * Sets the volume of the sound. Value of 0.0 means that the sound should be
-   * inaudible and value of 1.0 means the sound is played at its normal volume.
-   * Values above 1.0 are treated as 1.0 and values below 0.0 are treated as 0.0.
-   *
-   * NOTE: This feature is optional as it can't be supported on all platform implementations,
-   * but all implementations offer at least a "do nothing" method.
-   *
-   *@param volume The sounds volume.
-   */
-  virtual void setVolume( float volume )=0;
-
-  /**
    * Sets the pan of the sound. Value of -1.0 means that the sound will be
    * heard only from the left speaker and value of 1.0 means that the sound
    * will be heard only from the right speaker. Value of 0.0 means that
@@ -36,14 +24,6 @@ public:
    *@param pan The pan of the sound.
    */
   virtual void setPan( float pan )=0;
-
-  /**
-   * Returns the volume of the sound. Value of 0.0 means that the sound should be
-   * inaudible and value of 1.0 means the sound is played at its normal volume.
-   *
-   *@return The sounds volume.
-   */
-  virtual float getVolume()=0;
 
   /**
    * Returns the pan of the sound. Value of -1.0 means that the sound will be

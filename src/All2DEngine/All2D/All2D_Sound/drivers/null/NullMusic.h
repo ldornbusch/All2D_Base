@@ -19,4 +19,6 @@ public:
 	void free(){};
 	int getID(){return -1;};
 	const char* getSource(){return "";};
+	float getVolume(){return 0.f;};
+	void setVolume(float v){};
 };

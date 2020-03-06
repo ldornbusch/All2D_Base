@@ -385,6 +385,8 @@
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLMusic.cpp" />
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLMusic.h" />
 		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSample.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />

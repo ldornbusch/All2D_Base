@@ -8,7 +8,6 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Example" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/Debug" />
 				<Option object_output="obj/Debug/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -20,7 +19,6 @@
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/example" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/Release" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -54,11 +52,11 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-march=i586" />
 					<Add option="-fomit-frame-pointer" />
 					<Add option="-O3" />
 				</Compiler>
 				<Linker>
+					<Add library="bin/Release/libAll2D.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -74,35 +72,33 @@
 		<Linker>
 			<Add option="-m64" />
 			<Add option="-static-libgcc -static-libstdc++ -DSFML_STATIC" />
-            <Add option="" />
-            <Add library="libsfml-network-s.a" />
-            <Add library="libsfml-graphics-s.a" />
-            <Add library="libsfml-audio-s.a" />
-            <Add library="libsfml-window-s.a" />
-            <Add library="libsfml-system-s.a" />
-            <Add library="libfreetype.a" />
-            <Add library="libopenal.a" />
-            <Add library="libFLAC.a" />
-            <Add library="libvorbisenc.a" />
-            <Add library="libvorbisfile.a" />
-            <Add library="libvorbis.a" />
-            <Add library="libogg.a" />
-            <Add library="libjpeg.a" />
-            <Add library="libOpenGL.a" />
-            <Add library="pthread" />
-            <Add library="libdl" />
-            <Add library="X11" />
-            <Add library="GLEW" />
-            <Add library="X11-xcb" />
-            <Add library="udev" />
-            <Add library="xcb" />
-            <Add library="xcb-randr" />
-            <Add library="xcb-icccm" />
-            <Add library="xcb-image" />
-            <Add library="libXrandr" />
-            <Add directory="../_dependencies/lib" />
-            <Add directory="../SFML/build/lib" />
-
+			<Add library="libsfml-network-s.a" />
+			<Add library="libsfml-graphics-s.a" />
+			<Add library="libsfml-audio-s.a" />
+			<Add library="libsfml-window-s.a" />
+			<Add library="libsfml-system-s.a" />
+			<Add library="libfreetype.a" />
+			<Add library="libopenal.a" />
+			<Add library="libFLAC.a" />
+			<Add library="libvorbisenc.a" />
+			<Add library="libvorbisfile.a" />
+			<Add library="libvorbis.a" />
+			<Add library="libogg.a" />
+			<Add library="libjpeg.a" />
+			<Add library="libOpenGL.a" />
+			<Add library="pthread" />
+			<Add library="libdl" />
+			<Add library="X11" />
+			<Add library="GLEW" />
+			<Add library="X11-xcb" />
+			<Add library="udev" />
+			<Add library="xcb" />
+			<Add library="xcb-randr" />
+			<Add library="xcb-icccm" />
+			<Add library="xcb-image" />
+			<Add library="libXrandr" />
+			<Add directory="../_dependencies/lib" />
+			<Add directory="../SFML/build/lib" />
 		</Linker>
 		<Unit filename="src/All2DEngine/All2D/All2D_Base/Image.cpp">
 			<Option target="Debug" />
@@ -374,6 +370,8 @@
 			<Option target="Release" />
 			<Option target="Library" />
 		</Unit>
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLMusic.cpp" />
+		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLMusic.h" />
 		<Unit filename="src/All2DEngine/All2D/All2D_Sound/drivers/sfml/SFMLSample.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
