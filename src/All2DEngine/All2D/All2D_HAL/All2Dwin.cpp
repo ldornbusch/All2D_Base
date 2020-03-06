@@ -129,6 +129,11 @@ int All2DWin::MessageLoop()	//drawableElement.UpdateFrame () wird von Hier aufge
                 transformMouseCoords(HAL_Event);
             }
 
+            if(event.type == sf::Event::MouseWheelScrolled){
+                HAL_Event->Type=MM_MOUSEWHEEL;
+                HAL_Event->lData=long(event.mouseWheelScroll.delta);
+            }
+
             if(event.type == sf::Event::KeyPressed){
                 HAL_Event->Type=MM_KEYDOWN;
                 HAL_Event->wData=event.key.code;

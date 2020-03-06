@@ -72,6 +72,10 @@ bool UIScrollBar::handleEvent(Event *evt)
 	if (evt->Type==MM_SCROLL_DOWN && evt->wData==getID())
 		iActualValue-=iButtonSpeed;
 
+	if (evt->Type==MM_MOUSEWHEEL){
+		iActualValue+=evt->lData * iButtonSpeed;
+	}
+
 	if (evt->Type==MM_LBUTTONDOWN)
 	{
 		Point pt=All2D_System::extractMouseCoords(evt);

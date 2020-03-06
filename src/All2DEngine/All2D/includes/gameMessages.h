@@ -37,6 +37,8 @@
 #define		MN_ANIM_RESTART			8021			// NOTIFY MESSAGES...ANIM HAS RESTARTED
 #define		MN_ANIM_STOP			8022			// NOTIFY MESSAGES...ANIM HAS STOPPED
 
+#define 	MM_MOUSEWHEEL			8023            // Mousewheel support
+
 // Dies sind die Messages, um die Applikation zu steuern(Auswahl,Spiele,Ende)
 #define		MM_APP_QUIT				8223
 
