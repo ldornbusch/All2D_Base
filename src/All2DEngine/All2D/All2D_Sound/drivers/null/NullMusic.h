@@ -16,6 +16,7 @@ public:
 	void loop(){};
 	void stop(){};
 	bool isPlaying(){return false;};
+	void fade(float targetVolume, float ms_seconds){};
 	void free(){};
 	int getID(){return -1;};
 	const char* getSource(){return "";};

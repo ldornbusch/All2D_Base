@@ -21,6 +21,7 @@ public:
 	// sample
   void setVolume(float volume){fVolume=volume;};
   void setPan(float pan){fPan=pan;};
+  void fade(float targetVolume, float ms_seconds){};
   float getVolume(){return fVolume;};
   float getPan(){return fPan;};
   Sample* getCopy(){return new NullSample();};

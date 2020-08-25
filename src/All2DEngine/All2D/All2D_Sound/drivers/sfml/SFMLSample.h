@@ -24,7 +24,7 @@ public:
 	void stop();
 
 	bool isPlaying();
-
+    void fade(float targetVolume, float ms_seconds){/*TODO:*/};
 	void free();
 	void updateStatus();
 

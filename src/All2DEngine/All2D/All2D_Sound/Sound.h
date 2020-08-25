@@ -67,6 +67,15 @@ public:
     */
     virtual float getVolume()=0;
 
+    /**
+    * starts the playing sound at the current volume and interpolates the volume
+    * so it reaches targetVolume after ms_seconds passed(which is in milliseconds).
+    *
+    *@param targetVolume The sounds volume to reach after a specific time.
+    *@param ms_seconds The time until the sound reaches the specified volume
+    */
+    virtual void fade(float targetVolume, float ms_seconds)=0;
+
 	/**
 	 * Frees all the resources that are used by the sound representation.
 	 * This method is quite slow to execute and should preferrably be called upon

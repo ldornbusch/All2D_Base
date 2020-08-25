@@ -9,9 +9,6 @@
 class SoundEngine
 {
 public:
-	SoundEngine(){};
-	virtual ~SoundEngine(){};
-
   /**
    * Sets the data directory wherefrom the sounds are loaded.
    * The source directory defaults to the current directory.
