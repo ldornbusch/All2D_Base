@@ -66,6 +66,13 @@ void All2DWin::ChangeCoopLevel()
     InitWindow();
 }
 
+void All2DWin::setIcon(Image& img)
+{
+    sf::Image icon;
+    img.getBitMap()->returnImage(icon);
+    sfml_window.setIcon(img.getWidth(), img.getHeight(), icon.getPixelsPtr());
+}
+
 Rect All2DWin::getWindowPosition()
 {
     Rect retVal;

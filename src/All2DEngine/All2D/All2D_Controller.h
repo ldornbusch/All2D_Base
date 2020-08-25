@@ -26,6 +26,6 @@ protected:
 };
 
 // predefine All2Ds entrypoints
-bool All2D_init(int xres, int yres, std::string WinTitle);
+bool All2D_init(int xres, int yres, std::string WinTitle, Image* Icon=0);
 int All2D_main(All2D_Controller& ctrl);
 

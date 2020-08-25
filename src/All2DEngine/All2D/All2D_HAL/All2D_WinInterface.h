@@ -7,6 +7,7 @@
 #include "../../Utils/Rect.h"
 #include "../../Utils/Point.h"
 #include "../All2D_Events/Event.h"
+#include "../All2D_Base/Image.h"
 // pre-declaration
 class All2D_Controller;
 
@@ -19,6 +20,7 @@ public:
 	virtual void setSmooth(bool blnSmooth)=0;
     virtual Rect getWindowPosition()=0;
     virtual void transformMouseCoords(Event *evt)=0;
+    virtual void setIcon(Image& img)=0;
 	virtual void All2D_Exit()=0;
 	virtual ~All2D_WinInterface(){} ;
 };

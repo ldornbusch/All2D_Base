@@ -27,6 +27,7 @@ public:
     void transformMouseCoords(Event *evt);
 	void init();
 	int startApp(All2D_Controller& dE);
+    void setIcon(Image& img);
 
     All2DWin();
 private:

@@ -2,18 +2,18 @@
 #include "All2D/All2D_HAL/All2Dwin.h"
 
 #define NAME    "All3DInterface"
-#define TITLE   "DDraw to All3D Window/Screen"
+#define TITLE   "SFML to All2D Window/Screen"
 
 //LRESULT CALLBACK MainWndProc (HWND ,UINT,WPARAM ,LPARAM);
 bool fullscreen = false;	// app is in fullscreen mode
-All2DWin *myWin;					// Die Window-Klasse für DirectDraw Window
+All2DWin *myWin;			// Window-class for SFML Window
 
 //
 // initialize static system object
 // ------------------------------------------------------
 // get and set registry defaults if not present
 //
-bool All2D_init(int xres, int yres, std::string WinTitle)
+bool All2D_init(int xres, int yres, std::string WinTitle, Image* icon)
 {
 	All2D_System::fixedX=xres;
 	All2D_System::fixedY=yres;
@@ -22,6 +22,9 @@ bool All2D_init(int xres, int yres, std::string WinTitle)
 
 	myWin = new All2DWin();
 	myWin->init();
+	if (icon){
+        myWin->setIcon(*icon);
+	}
 	PicLoader::init();
 	return true;
 }
