@@ -28,8 +28,8 @@ LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_MAIN_ICON           ICON    DISCARDABLE     "Columns.ico"
-IDI_APPICON             ICON    DISCARDABLE     "icon1.ico"
+MAIN_ICON           ICON    DISCARDABLE     "all2d.ico"
+
 
 #ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
@@ -102,18 +102,18 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE DISCARDABLE
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE DISCARDABLE
 BEGIN
     "#include <windows.h>\r\n"
     "#include <afxres.h>\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE DISCARDABLE
 BEGIN
     "\r\n"
     "\0"
